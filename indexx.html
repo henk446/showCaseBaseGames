@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container"></div>
+
+    <script>
+
+        const container = document.querySelector('.container')
+        
+        window.addEventListener('load', init)
+
+
+        function init(){
+            for (let i = 0; i < 6; i++) {
+                const div = document.createElement('div')
+                const img = document.createElement('div')
+                const title = document.createElement('div')
+
+                div.setAttribute('class', 'games')
+                img.setAttribute('class', 'image')
+                title.setAttribute('class', 'text')
+
+                div.style.display = 'inline-block';
+                div.style.textAlign = 'center';
+                div.style.padding = '10px 10px'
+                div.style.width = '180px';
+                div.style.height = '180px';
+                div.style.margin = '10px'
+                div.style.backgroundColor = 'tomato';
+                div.style.borderRadius = '15px'
+
+                img.style.backgroundColor = 'blue';
+                img.style.width = 'auto';
+                img.style.height = '120px';
+                img.style.borderRadius = '15px 15px 0 0 '
+
+                title.style.width = 'auto';
+                title.style.height = '60px';
+                title.style.backgroundColor = 'red';
+                title.style.color = 'white';
+                title.style.borderRadius = '0 0 15px 15px'
+                title.innerHTML = 'jogo numero: '+i;
+
+                div.appendChild(img)
+                div.appendChild(title)
+                container.appendChild(div)
+                
+                div.addEventListener('click', function(){
+                    console.log(title.innerHTML)
+                })
+            }
+        }
+
+    </script>
+</body>
+</html>

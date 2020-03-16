@@ -1,0 +1,5 @@
+11.combination-guesser-game
+14.0pattern-matching-game
+15.1.click-popper-game
+16.1.hi-lo-card-game
+18.1.scrambed-words
